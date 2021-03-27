@@ -7,24 +7,25 @@ public class PisoCubico : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (float x = -40; x < 40; x + = 2)
+        for (float x = -20; x < 20; x += 4)
         {
-            for (float z = -40; z < 40; z + = 2)
+            for (float z = -20; z < 20; z += 4)
             {
-                float rx = Random.Range(1.0F, 1.5F);
-                float ry = Random.Range(3.5F, 5.0F);
-                float rz = Random.Range(1.0F, 1.5F);
+                float rx = Random.Range(2.0F, 4.0F);
+                float ry = Random.Range(15.0F, 18.0F);
+                float rz = Random.Range(2.0F, 4.5F);
 
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.transform.parent = transform;
-                cube.transform.localPosition = new Vector3(x,0,z);
-                cube.transform.localScale = new Vector3(rx,ry,rz);
+                cube.transform.localPosition = new Vector3(x, 0, z);
+                cube.transform.localScale = new Vector3(rx, ry, rz);
             }
         }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }
