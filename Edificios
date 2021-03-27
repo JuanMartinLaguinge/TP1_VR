@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PisoCubico : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (float x = -20; x < 20; x + = 1)
+        {
+            for (float z = -20; z < 20; z + = 1)
+            {
+                float rx = Random.Range(1.0F, 1.5F);
+                float ry = Random.Range(0.2F, 2.0F);
+                float rz = Random.Range(1.0F, 1.5F);
+
+                GameObject cube = GameObject.CreatePrimitive)PrimitiveType.Cube);
+                cube.transform.parent = 
+            }
+        }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
