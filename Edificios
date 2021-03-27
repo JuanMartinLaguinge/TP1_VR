@@ -15,7 +15,7 @@ public class PisoCubico : MonoBehaviour
                 float ry = Random.Range(0.2F, 2.0F);
                 float rz = Random.Range(1.0F, 1.5F);
 
-                GameObject cube = GameObject.CreatePrimitive)PrimitiveType.Cube);
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.transform.parent = transform;
                 cube.transform.localPosition = new Vector3(x,0,z);
                 cube.transform.localScale = new Vector3(rx,ry,rz);
