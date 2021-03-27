@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Camara: MonoBehaviour{
+
+  public Transform camPivot;
+  float heading = 0;
+  public Transform cam;
+  
+  Vector2 input;
+  
+  void Update(){
+    heading += Input.GetAxis("Mouse X")*Time.deltaTime*180;
+    camPivot.rotation= Quaternion.Euler(0,heading,0);
+    
+    input= new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    input= Vector2.ClampMagnitude(input,1);
+    
+    Vector3 camF = cam.foward;
+    Vector3 camR = cam.right;
+    
+    camF.y= 0;
+    camR.y= 0;
+    camF= camF.normalized;
+    camR= camR.normalized;
+    
+    transform.position += |camF*input + camR*input.x;
+    }
+}
