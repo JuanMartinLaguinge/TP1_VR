@@ -7,12 +7,12 @@ public class PisoCubico : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (float x = -20; x < 20; x + = 1)
+        for (float x = -40; x < 40; x + = 2)
         {
-            for (float z = -20; z < 20; z + = 1)
+            for (float z = -40; z < 40; z + = 2)
             {
                 float rx = Random.Range(1.0F, 1.5F);
-                float ry = Random.Range(0.2F, 2.0F);
+                float ry = Random.Range(3.5F, 5.0F);
                 float rz = Random.Range(1.0F, 1.5F);
 
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
