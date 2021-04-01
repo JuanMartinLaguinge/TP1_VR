@@ -14,7 +14,7 @@ public class Camaramovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float deltaTime = Time.deltaTime;
-        transform.position += camera.transform.forward;
+        Camera cam = gameObject.GetComponentInChildren<Camera>();
+        transform.position += cam.transform.forward*Time.deltaTime*_Distance;
     }
 }
